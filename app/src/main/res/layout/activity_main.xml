@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/dContentLayout"
+    android:padding="16dp"
+    android:background="#303030">
+
+    <AbsoluteLayout
+        android:layout_height="wrap_content"
+        android:id="@+id/imagesLayout"
+        android:layout_width="fill_parent"
+        android:minHeight="200dip">
+
+        <ImageView
+            android:id="@+id/dForecastImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="131dp"
+            android:layout_y="-3dp"
+            android:adjustViewBounds="true"
+            android:maxHeight="131dip"
+            android:maxWidth="131dip"
+            android:minHeight="131dip"
+            android:minWidth="131dip"
+            android:src="@drawable/weather_sunny" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dMoveLeftImage"
+            android:maxHeight="131dip"
+            android:maxWidth="131dip"
+            android:minHeight="131dip"
+            android:minWidth="131dip"
+            android:src="@drawable/weather_cloudy"
+            android:layout_x="10dip"
+            android:adjustViewBounds="true"
+            android:visibility="invisible"
+            android:layout_y="70dip" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dMoveRightImage"
+            android:adjustViewBounds="true"
+            android:maxHeight="131dip"
+            android:maxWidth="131dip"
+            android:minHeight="131dip"
+            android:minWidth="131dip"
+            android:src="@drawable/weather_cloudy"
+            android:layout_x="150dip"
+            android:visibility="invisible"
+            android:layout_y="70dip" />
+
+        <TextView
+            android:id="@+id/dCityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="46dp"
+            android:layout_y="108dp"
+            android:width="280dip"
+            android:gravity="center"
+            android:text="ShenZhen, Guangdong"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dConditionText"
+            android:layout_x="20dip"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:width="120dip"
+            android:text="Light Rain"
+            android:layout_y="140dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="20dip"
+            android:id="@+id/dHumidityText"
+            android:text="Humidity: 68%"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:layout_y="160dip"
+            android:width="160dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="20dip"
+            android:id="@+id/dWindText"
+            android:text="Wind: S at 2 mph"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:layout_y="180dip"
+            android:width="160dip" />
+
+        <TextView
+            android:id="@+id/dTempCText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="260dp"
+            android:layout_y="138dp"
+            android:width="100dip"
+            android:gravity="center"
+            android:text="29°"
+            android:textColor="@android:color/white"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="14dp"
+            android:layout_y="16dp"
+            android:text="@string/dateFormat" />
+    </AbsoluteLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:dividerHeight="8dp"
+        android:divider="@android:color/transparent"
+        android:background="#303030" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/musicPlayerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Music Player"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/scheduleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Schedule"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</LinearLayout>
+

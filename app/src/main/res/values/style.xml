@@ -1,0 +1,54 @@
+<resources>
+    <style name="CalendarDateText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="CalendarWeekDayText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+        <style name="spinnerTheme" parent="Widget.AppCompat.Spinner">
+            <item name="android:textColor">@android:color/white</item>
+            <item name="android:textSize">16sp</item>
+        </style>
+        <!-- 基本应用主题 -->
+        <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+            <!-- 定制你的主题 -->
+            <item name="colorPrimary">#5E35B1</item>
+            <item name="colorPrimaryDark">#5E35B1</item>
+            <item name="colorAccent">@color/teal_200</item>
+            <item name="android:windowBackground">#DCEBF1</item>
+            <item name="android:textColor">@color/black</item>
+
+
+        </style>
+
+        <style name="AppTheme_Night" parent="Theme.AppCompat.DayNight.DarkActionBar">
+            <!-- 定制你的主题 -->
+            <item name="colorPrimary">@color/teal_200</item>
+            <item name="colorPrimaryDark">@color/teal_200</item>
+            <item name="colorAccent">@color/teal_700</item>
+            <item name="android:windowBackground">#818181</item>
+            <item name="android:textColor">@color/white</item>
+        </style>
+
+
+    <!-- Spinner Item Styles -->
+    <style name="MySpinnerItemStyle" parent="TextAppearance.AppCompat.Widget.PopupMenu.Small">
+        <item name="android:background">#DCEBF1</item>
+
+    </style>
+
+    <style name="MySpinnerItemStyle.Night" parent="TextAppearance.AppCompat.Widget.PopupMenu.Small">
+        <item name="android:background">#818181</item>
+
+    </style>
+
+
+
+
+
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, DetailForecastActivity!</string>
+	<string name="app_name">天气预报</string>
+	<string name="labelCity">设置城市</string>
+	<string name="btnSave">保存</string>
+	<string name="titleConfigure">配置</string>
+	<string name="titleDetail">四天天气</string>
+	<string name="lableUpdateTime">设置应用更新时间</string>
+	<string name="empty">No data found!</string>
+	<string name="dateFormat">yyyy年MM月dd日</string>
+	<string name="monday">周一</string>
+	<string name="tuesday">周二</string>
+	<string name="wednesday">周三</string>
+	<string name="thursday">周四</string>
+	<string name="friday">周五</string>
+	<string name="saturday">周六</string>
+	<string name="sunday">周日</string>
+	<string name="add_schedule">Add Schedule</string>
+	<string-array name="cities_array">
+		<item>北京</item>
+		<item>沈阳</item>
+		<item>上海</item>
+		<item>广州</item>
+		<item>深圳</item>
+		<item>天津</item>
+		<item>重庆</item>
+		<item>杭州</item>
+		<item>南京</item>
+		<item>成都</item>
+		<item>武汉</item>
+		<item>西安</item>
+		<item>长沙</item>
+		<item>青岛</item>
+		<item>大连</item>
+		<item>沈阳</item>
+		<item>济南</item>
+		<item>哈尔滨</item>
+		<item>郑州</item>
+		<item>厦门</item>
+		<item>苏州</item>
+		<item>宁波</item>
+		<item>福州</item>
+		<item>合肥</item>
+		<item>石家庄</item>
+		<item>南昌</item>
+		<item>昆明</item>
+		<item>长春</item>
+		<item>兰州</item>
+		<item>太原</item>
+		<item>贵阳</item>
+		<item>乌鲁木齐</item>
+		<item>海口</item>
+	</string-array>
+
+	<string-array name="city_ids">
+		<item>101010100</item>
+		<item>101070101</item>
+		<item>101020100</item>
+		<item>101280101</item>
+		<item>101280601</item>
+		<item>101030100</item>
+		<item>101040100</item>
+		<item>101210101</item>
+		<item>101190101</item>
+		<item>101270101</item>
+		<item>101200101</item>
+		<item>101110101</item>
+		<item>101250101</item>
+		<item>101120201</item>
+		<item>101070201</item>
+		<item>101070101</item>
+		<item>101120101</item>
+		<item>101050101</item>
+		<item>101180101</item>
+		<item>101230201</item>
+		<item>101190401</item>
+		<item>101210401</item>
+		<item>101230101</item>
+		<item>101220101</item>
+		<item>101090101</item>
+		<item>101240101</item>
+		<item>101290101</item>
+		<item>101060101</item>
+		<item>101160101</item>
+		<item>101100101</item>
+		<item>101260101</item>
+		<item>101130101</item>
+		<item>101310101</item>
+	</string-array>
+
+
+
+</resources>
