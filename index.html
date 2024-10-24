@@ -8,24 +8,63 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #f0f0f0;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
+            margin-left: 300px; /* 保证正文和侧边栏不会重叠 */
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            overflow-y: auto; /* 保证侧边栏可以滚动 */
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        /* Flexbox container for features */
+        .features {
+            display: flex;
+            justify-content: space-between; /* 确保图片和文字之间有空隙 */
+            flex-wrap: wrap; /* 允许换行 */
+            gap: 20px; /* 控制每个功能块之间的间距 */
+        }
+
+        /* Feature block style */
+        .feature-section {
+            width: 30%; /* 确保每个功能块占据30%的宽度 */
+            box-sizing: border-box; /* 使 padding 不影响整体宽度 */
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1, h3 {
             color: #333;
         }
+
         .screenshot {
-            max-width: 100%;
+            width: 100%; /* 让图片充满每个功能块 */
             height: auto;
-            margin: 20px 0;
+            margin-bottom: 10px;
+            border-radius: 8px; /* 给图片添加圆角 */
         }
+
         .download-btn {
             display: inline-block;
             padding: 10px 20px;
@@ -37,43 +76,153 @@
         .download-btn:hover {
             background-color: #45a049;
         }
+
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .lang-switch button {
+            padding: 5px 10px;
+            margin-left: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Welcome to My Android App</h1>
-    <p>This is a simple Android app designed to demonstrate a music player and schedule manager.</p>
-    
-    <!-- App Screenshot -->
-    <img class="screenshot" src="path-to-your-screenshot.png" alt="App Screenshot">
-    
-    <h2>Features</h2>
-    <ul>
-        <li>Music Player: Play, pause, next, previous functionality.</li>
-        <li>Schedule Manager: Add, edit, and delete reminders.</li>
-        <li>Weather Forecast: Get weather updates using your own API key.</li>
-    </ul>
-    
-    <h2>Download and Install</h2>
-    <p>To install the app on your Android device:</p>
-    <ol>
-        <li>Download the APK file from the link below.</li>
-        <li>On your Android device, go to Settings > Security and enable "Unknown Sources" to allow installation of apps from sources other than the Play Store.</li>
-        <li>Open the downloaded APK file to install the app.</li>
-    </ol>
-
-    <!-- Download Button -->
-    <a class="download-btn" href="path-to-your-app-debug.apk" download>Download APK</a>
-    
-    <h2>API Key Setup</h2>
-    <p>If you want to use your own weather API key:</p>
-    <ol>
-        <li>Go to the app settings in the app and enter your own API key.</li>
-        <li>Alternatively, modify the `res/values/strings.xml` or `BuildConfig` to replace the API key in the source code.</li>
-    </ol>
-
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Navigation</h2>
+    <a href="#features">Features</a>
+    <a href="#download">Download and Install</a>
+    <a href="#api">API Key Setup</a>
 </div>
+
+<!-- Language Switch -->
+<div class="lang-switch">
+    <button onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('zh')">简体中文</button>
+</div>
+
+<!-- Content -->
+<div class="container">
+    <div id="en-content">
+        <h1>Welcome to My Android App</h1>
+        <p>Welcome to Weather Forecast App, an elegant and user-friendly Android app that provides accurate weather forecasts with additional features such as a music player and schedule management. This app is designed to enhance your daily life experience, not only allowing you to keep up to date with weather conditions, but also allowing you to enjoy music and effectively manage your schedule.</p>
+
+        <h2 id="features">Features</h2>
+
+        <!-- Features Container -->
+        <div class="features">
+            <!-- Music Player Feature -->
+            <div class="feature-section">
+                <h3>Music Player</h3>
+                <p>The music player allows you to play, pause, skip tracks, and go back to the previous song. It provides an easy-to-use interface for managing your music collection.</p>
+                <img class="screenshot" src="https://github.com/cyy-2024/Weather-Report/blob/master/music.png?raw=true" alt="Music Player Screenshot">
+            </div>
+
+            <!-- Schedule Manager Feature -->
+            <div class="feature-section">
+                <h3>Schedule Manager</h3>
+                <p>With the schedule manager, you can create, edit, and delete reminders for important events. Stay organized by keeping track of your daily tasks and appointments.</p>
+                <img class="screenshot" src="https://github.com/cyy-2024/Weather-Report/blob/master/%E5%A4%87%E5%BF%98%E5%BD%95.png?raw=true" alt="Schedule Manager Screenshot">
+            </div>
+
+            <!-- Weather Forecast Feature -->
+            <div class="feature-section">
+                <h3>Weather Forecast</h3>
+                <p>The weather forecast feature provides real-time weather updates based on your location. Use your own API key to get weather data for your specific region.</p>
+                <img class="screenshot" src="https://github.com/cyy-2024/Weather-Report/blob/master/weather.png?raw=true" alt="Weather Forecast Screenshot">
+            </div>
+        </div>
+
+        <h2 id="download">Download and Install</h2>
+        <p>To install the app on your Android device:</p>
+        <ol>
+            <li>Download the APK file from the link below.</li>
+            <li>On your Android device, go to Settings > Security and enable "Unknown Sources" to allow installation of apps from sources other than the Play Store.</li>
+            <li>Open the downloaded APK file to install the app.</li>
+        </ol>
+
+        <!-- Download Button -->
+        <a class="download-btn" href="https://github.com/cyy-2024/Weather-Report/blob/master/app-debug.apk" download>Download APK</a>
+        
+        <h2 id="api">API Key Setup</h2>
+        <p>If you want to use your own weather API key:</p>
+        <ol>
+            <li>Clone this project</li>
+			<li> replacing the API key in the source code.</li>
+        
+        </ol>
+    </div>
+
+    <div id="zh-content" class="hidden">
+        <h1>欢迎使用我的安卓应用</h1>
+        <p>欢迎使用 天气预报App，这是一款优雅且用户友好的安卓应用程序，提供精准的天气预报，同时具备音乐播放器和日程管理等额外功能。本应用旨在提升您的日常生活体验，不仅能让您及时了解天气状况，还能让您享受音乐并有效管理日程。</p>
+
+        <h2 id="features">功能</h2>
+
+        <!-- Features Container in Chinese -->
+        <div class="features">
+            <!-- Music Player Feature in Chinese -->
+            <div class="feature-section">
+                <h3>音乐播放器</h3>
+                <p>音乐播放器允许您播放、暂停、跳过曲目并返回上一首歌。 它提供了一个易于使用的界面来管理您的音乐收藏。</p>
+                <img class="screenshot" src="https://github.com/cyy-2024/Weather-Report/blob/master/music.png?raw=true" alt="音乐播放器截图">
+            </div>
+
+            <!-- Schedule Manager Feature in Chinese -->
+            <div class="feature-section">
+                <h3>日程管理</h3>
+                <p>使用日程管理器，您可以创建、编辑和删除重要事件的提醒。 通过跟踪日常任务和约会保持井井有条。</p>
+                <img class="screenshot" src="https://github.com/cyy-2024/Weather-Report/blob/master/%E5%A4%87%E5%BF%98%E5%BD%95.png?raw=true" alt="日程管理器截图">
+            </div>
+
+            <!-- Weather Forecast Feature in Chinese -->
+            <div class="feature-section">
+                <h3>天气预报</h3>
+                <p>天气预报功能基于您的位置提供实时天气更新。 使用您自己的API密钥获取您所在地区的天气数据。</p>
+                <img class="screenshot" src="https://github.com/cyy-2024/Weather-Report/blob/master/weather.png?raw=true" alt="天气预报截图">
+            </div>
+        </div>
+
+        <h2 id="download">下载并安装</h2>
+        <p>在您的安卓设备上安装此应用：</p>
+        <ol>
+            <li>从下面的链接下载APK文件。</li>
+            <li>在您的安卓设备上，进入设置 > 安全，并启用“未知来源”。</li>
+            <li>打开下载的APK文件以安装应用。</li>
+			  <li>允许本软件获取定位信息和消息通知信息。</li>
+        </ol>
+
+        <!-- Download Button -->
+        <a class="download-btn" href="https://github.com/cyy-2024/Weather-Report/blob/master/app-debug.apk" download>下载APK</a>
+        
+        <h2 id="api">API密钥设置</h2>
+        <p>如果您想使用自己的天气API密钥：</p>
+        <ol>
+            <li>克隆此项目</li>
+			<li>替换源代码中的API密钥</li>
+        </ol>
+    </div>
+</div>
+
+<script>
+    function switchLang(lang) {
+        if (lang === 'en') {
+            document.getElementById('en-content').classList.remove('hidden');
+            document.getElementById('zh-content').classList.add('hidden');
+        } else {
+            document.getElementById('en-content').classList.add('hidden');
+            document.getElementById('zh-content').classList.remove('hidden');
+        }
+    }
+</script>
 
 </body>
 </html>
