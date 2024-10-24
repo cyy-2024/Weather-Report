@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Android App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .screenshot {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .download-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome to My Android App</h1>
+    <p>This is a simple Android app designed to demonstrate a music player and schedule manager.</p>
+    
+    <!-- App Screenshot -->
+    <img class="screenshot" src="path-to-your-screenshot.png" alt="App Screenshot">
+    
+    <h2>Features</h2>
+    <ul>
+        <li>Music Player: Play, pause, next, previous functionality.</li>
+        <li>Schedule Manager: Add, edit, and delete reminders.</li>
+        <li>Weather Forecast: Get weather updates using your own API key.</li>
+    </ul>
+    
+    <h2>Download and Install</h2>
+    <p>To install the app on your Android device:</p>
+    <ol>
+        <li>Download the APK file from the link below.</li>
+        <li>On your Android device, go to Settings > Security and enable "Unknown Sources" to allow installation of apps from sources other than the Play Store.</li>
+        <li>Open the downloaded APK file to install the app.</li>
+    </ol>
+
+    <!-- Download Button -->
+    <a class="download-btn" href="path-to-your-app-debug.apk" download>Download APK</a>
+    
+    <h2>API Key Setup</h2>
+    <p>If you want to use your own weather API key:</p>
+    <ol>
+        <li>Go to the app settings in the app and enter your own API key.</li>
+        <li>Alternatively, modify the `res/values/strings.xml` or `BuildConfig` to replace the API key in the source code.</li>
+    </ol>
+
+</div>
+
+</body>
+</html>
